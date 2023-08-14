@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+body{
+    padding-top: 5%;
+    margin: 5% 5% 0 5%;
+}
+
+.fixed ul{
+    list-style: none;
+    display: none;
+}
+
+.menubtn{
+    position: fixed;
+    top: 7%;
+    right: 7%;
+    display: block;
+}
+
+.overlay{
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.7s;
+}
+
+.overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.overlay a{
+    padding:1%;
+    text-decoration: none;
+    font-size: 4em;
+    color: white;
+    font-weight: 700;
+    display: block;
+    transition: 0.3s;
+    margin-left: 4%;
+    letter-spacing: -.1em;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn{
+    position: absolute;
+    top: 7%;
+    right: 7%;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+  
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5%;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+  
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5%;
+}
+
+.name h1{
+    font-size: 2.5rem;
+    line-height: .9em;
+    letter-spacing: -.1em;
+}
+
+.image img{
+    width: 100%;
+}
+
+.header-info h3{
+    font-size: 1.8rem;
+    line-height: .9em;
+    letter-spacing: -.1rem;
+    padding-bottom: 10%;
+    padding-top: 5%;
+}
+
+.header-info p{
+    font-weight: 600;
+}
+
+#about {
+    margin-top: 20%;
+}
+
+#about h2{
+    font-size: 3em;
+    padding-bottom: 2%;
+    letter-spacing: -.2rem;
+}
+
+#about .about-grid-container .educ-info h3{
+    font-size: 1.5em;
+    letter-spacing: -.1rem;
+    padding-bottom: 2%;
+}
+
+#about .about-grid-container ul{
+    padding: 2% 0 2% 0;
+    list-style: none;
+}
+
+#about .about-grid-container li{
+    font-weight: 600;
+}
+
+#about .about-grid-container .skill-info h3{
+    font-size: 1.5em;
+    letter-spacing: -.1rem;
+    padding-bottom: 2%;
+}
+
+#about .about-grid-container .skill-info{
+    padding-bottom: 10%;
+}
+
+.contact-container h1{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 5em;
+    letter-spacing: -.1em;
+    line-height: 1em;
+}
+
+.contact-container .email-info{
+    padding: 5% 0 15% 0;
+}
+
+.contact-container p{
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -.1rem;
+    padding-bottom: 5%;
+}
+
+.contact-container .email-info a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: -.1rem;
+}
+
+sub {
+    font-size: .5em;
+}
+
+.contact-container .socials a{
+    font-size: 2em;
+    margin: 5%;
+}
+
+.temp{
+    margin: 50% auto;
+    font-size: 2.5em;
+    font-weight: 800;
+    letter-spacing: -.2rem;
+}
+
+@media (min-width: 900px) {
+#navbar, .menubtn{
+    display: none;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    padding-right: 12%;
+    margin: 2%;
+    top: 0;
+    
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: -.2rem;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+  
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5%;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+  
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.hover-underline-animation .email {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+  
+.hover-underline-animation .email::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5%;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+  
+.hover-underline-animation:hover .email::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.name{
+    grid-area: name;
+}
+
+.image{
+    grid-area: image;
+}
+
+.header-info{
+    grid-area: info;
+}
+
+.grid-container {  
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 2%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "name name"
+      "image info";
+    margin-top: -5%;
+    margin-bottom: 2%;
+}
+
+.name h1{
+    font-size: 5em;
+}
+
+.header-info h3{
+    font-size: 3em;
+    letter-spacing: -.1em;
+}
+
+.header-info p{
+    font-size: 1.5em;
+}
+
+#about{
+    margin-top: 0;
+}
+
+#about ul{
+    list-style: none;
+    font-size:  1.5em;
+    letter-spacing: -.1rem;
+}
+
+#about h2{
+    font-size: 6em;
+    letter-spacing: -.5rem;
+    line-height: 7rem;
+    margin-bottom: 2%;
+}
+
+.educ-info .about-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#about .about-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 5% 0 5%;
+}
+
+.contact-container h1{
+    font-size: 6em;
+    letter-spacing: -.7rem;
+    line-height: 7rem;
+}
+
+.email-info{
+    margin-bottom: 5%;
+}
+
+.contact-info .email-info p, .contact-info .socials p{
+    font-size: 3em;
+    letter-spacing: -.3rem;
+    font-weight: 700;
+    line-height: 5rem;
+}
+
+.contact-info .email-info a{
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: -.1rem;
+    font-weight: 700;
+}
+
+.socials a{
+    margin-top: 10%;
+    margin-right: 2%;
+    font-size: 2em;
+}
+
+.temp{
+    margin: 10%;
+    font-size: 5em;
+    line-height: 7rem;
+    letter-spacing: -.1em;
+    font-weight: 800;
+}
+
+}
